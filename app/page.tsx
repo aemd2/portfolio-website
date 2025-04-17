@@ -37,7 +37,7 @@ export default function Home() {
       id: 2,
       title: "Eurovoyage",
       description: "STRATEGIC DESIGN FOR EUROPEAN TRAVEL EXPERIENCES • 2024",
-      image: "/eurovoyage/LogoEU.png",
+      image: "/eurovoyage/EuroloyageLogo.png",
       slug: "eurovoyage",
     },
     {
