@@ -6,8 +6,8 @@ export const metadata: Metadata = {
   description: 'Product Designer based in Plovdiv, Bulgaria | Creating user-centric digital experiences',
   generator: 'v0.dev',
   icons: {
-    icon: '/favicon.ico',
-    apple: '/apple-icon.png',
+    icon: '/e-favicon.ico',
+    apple: '/e-logo.svg',
   },
 }
 
