@@ -53,28 +53,7 @@ export default function Home() {
       description: "INTERNAL PRODUCT • STREAMLINING OPERATIONS FOR 20+ TEAMS • 2023",
       image: "/Dream-ai/logo-dark.png",
       slug: "Dream-Ai",
-    },
-    {
-      id: 9,
-      title: "Social Media App",
-      description: "CONNECTING COMMUNITIES • 2022",
-      image: "/placeholder.svg?height=800&width=800",
-      slug: "social-media-app",
-    },
-    {
-      id: 10,
-      title: "Productivity Tool",
-      description: "ENHANCING WORK EFFICIENCY • 2023",
-      image: "/placeholder.svg?height=800&width=800",
-      slug: "productivity-tool",
-    },
-    {
-      id: 11,
-      title: "Travel Booking Platform",
-      description: "SIMPLIFYING TRAVEL PLANNING • 2022",
-      image: "/placeholder.svg?height=800&width=800",
-      slug: "travel-booking",
-    },
+    }
   ]
 
   // Explicitly type the empty smallProjects array
@@ -212,20 +191,6 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="container mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {projects.slice(4, 6).map((project) => (
-              <AnimatedProjectCard
-                key={project.id}
-                id={project.id}
-                title={project.title}
-                description={project.description}
-                image={project.image}
-                slug={project.slug}
-              />
-            ))}
-          </div>
-        </section>
       </main>
 
       <footer className="border-t border-black/10 py-6">

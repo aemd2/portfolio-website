@@ -2,9 +2,13 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'v0 App',
-  description: 'Created with v0',
+  title: 'Emil Donchev | Product Designer',
+  description: 'Product Designer based in Plovdiv, Bulgaria | Creating user-centric digital experiences',
   generator: 'v0.dev',
+  icons: {
+    icon: '/favicon.ico',
+    apple: '/apple-icon.png',
+  },
 }
 
 export default function RootLayout({
@@ -14,7 +18,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body suppressHydrationWarning={true}>
+        {children}
+      </body>
     </html>
   )
 }
