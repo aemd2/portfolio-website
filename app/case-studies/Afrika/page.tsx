@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from "react"
 import Link from "next/link"
 import { ArrowLeft, ArrowRight, CheckCircle } from "lucide-react"
 import { ImageWithLoader } from "@/components/image-with-loader"
+import { Header } from "@/components/ui/header"
 
 export default function AfrikaCaseStudy() {
   const [isLoading, setIsLoading] = useState(true)
@@ -199,27 +200,7 @@ export default function AfrikaCaseStudy() {
           </div>
         </div>
       )}
-      <header className="fixed top-0 left-0 right-0 z-50 border-b border-black/10 bg-[#f8f5f2]/80 backdrop-blur-sm">
-        <div className="container mx-auto px-6 py-4 flex justify-between items-center">
-          <Link href="/" className="text-xl font-medium">
-            EMIL DONCHEV
-          </Link>
-          <nav className="flex items-center space-x-6">
-            <Link href="/" className="text-sm font-medium hover:text-black/70 transition-colors">
-              HOME
-            </Link>
-            <Link href="/about" className="text-sm font-medium hover:text-black/70 transition-colors">
-              ABOUT
-            </Link>
-            <Link href="/blog" className="text-sm font-medium hover:text-black/70 transition-colors">
-              BLOG
-            </Link>
-            <Link href="/cv" className="text-sm font-medium hover:text-black/70 transition-colors">
-              CV
-            </Link>
-          </nav>
-        </div>
-      </header>
+      <Header />
 
       <main className="pt-24 pb-20">
         <article className="container mx-auto px-6">

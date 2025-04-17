@@ -1,6 +1,7 @@
 import Link from "next/link"
 import Image from "next/image"
 import { ArrowLeft, ArrowRight, Calendar } from "lucide-react"
+import { Header } from "@/components/ui/header"
 
 export default function BlogPage() {
   const blogPosts = [
@@ -43,44 +44,7 @@ export default function BlogPage() {
 
   return (
     <div className="min-h-screen bg-[#f8f5f2] text-[#2d2d2d]">
-      <header className="fixed top-0 left-0 right-0 z-50 border-b border-black/10 bg-[#f8f5f2]/80 backdrop-blur-sm">
-        <div className="container mx-auto px-6 py-4 flex justify-between items-center">
-          <Link href="/" className="text-xl font-medium">
-            EMIL DONCHEV
-          </Link>
-          <nav className="flex items-center space-x-6">
-            <Link href="/" className="text-sm font-medium hover:text-black/70 transition-colors">
-              HOME
-            </Link>
-            <Link href="/about" className="text-sm font-medium hover:text-black/70 transition-colors">
-              ABOUT
-            </Link>
-            <Link href="/blog" className="text-sm font-medium hover:text-black/70 transition-colors">
-              BLOG
-            </Link>
-            <Link href="/cv" className="text-sm font-medium hover:text-black/70 transition-colors">
-              CV
-            </Link>
-            <Link href="#" className="text-sm font-medium hover:text-black/70 transition-colors">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <circle cx="12" cy="12" r="10" />
-                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
-                <path d="M2 12h20" />
-              </svg>
-            </Link>
-          </nav>
-        </div>
-      </header>
+      <Header />
 
       <main className="pt-24 pb-20">
         <div className="container mx-auto px-6">

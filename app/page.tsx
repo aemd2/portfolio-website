@@ -6,6 +6,7 @@ import { PageLoader } from "@/components/page-loader"
 import { AnimatedTestimonials } from "@/components/animated-testimonials"
 import { AnimatedProjectCard } from "@/components/animated-project-card"
 import { AnimatedSmallProjectCard } from "@/components/animated-small-project-card"
+import { Header } from "@/components/ui/header"
 
 // Define an interface for the small project structure
 interface SmallProject {
@@ -108,24 +109,7 @@ export default function Home() {
     <div className="min-h-screen bg-[#f8f5f2] text-[#2d2d2d]">
       <PageLoader />
 
-      <header className="fixed top-0 left-0 right-0 z-50 border-b border-black/10 bg-[#f8f5f2]/80 backdrop-blur-sm">
-        <div className="container mx-auto px-6 py-4 flex justify-between items-center">
-          <Link href="/" className="text-xl font-medium">
-            EMIL DONCHEV
-          </Link>
-          <nav className="flex items-center space-x-6">
-            <Link href="/" className="text-sm font-medium hover:text-black/70 transition-colors">
-              HOME
-            </Link>
-            <Link href="/about" className="text-sm font-medium hover:text-black/70 transition-colors">
-              ABOUT
-            </Link>
-            <Link href="https://medium.com/@aemd2donchev" className="text-sm font-medium hover:text-black/70 transition-colors">
-              BLOG
-            </Link>
-          </nav>
-        </div>
-      </header>
+      <Header />
 
       <main className="pt-24 pb-20">
         {/* Hero Section */}
