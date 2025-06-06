@@ -78,6 +78,12 @@ export default function Home() {
         "Working with Emil on our European travel platform was a remarkable experience. His user-centered design approach and attention to detail significantly improved our user engagement metrics. His ability to combine aesthetic appeal with functional simplicity made our complex booking system accessible to all users, regardless of their tech proficiency.",
       author: "Mikhail Petrov",
       role: "Project Manager, Eurovoyage",
+    },
+    {
+      quote:
+        "We had the pleasure to work with Emil as a volunteer UI/UX designer at Murphy Charitable Foundation for seven months. In this time, he improved our interface by redesigning major features like the media-sharing flow and notification interactions. He also took initiative to introduce motion design, making our app more engaging. What I admire most is his attitude—Emil is passionate, resilient, and a true team player. He accepts feedback positively, never takes it personal, and always focuses on what is best for both user and team. His professionalism and positive energy made him an essential part of our design efforts. After seven months, Emil became so indispensable that we even moved our meeting times so he could always join. We sincerely appreciate all his contributions and are very sad to see him go.",
+      author: "Rez GodarzvandChegini",
+      role: "Murphy Charitable Foundation",
     }
   ]
 
