@@ -243,7 +243,7 @@ export default function EurovoyageCaseStudy() {
         <text x="10" y="95" class="text">5. Payment & Subscription Plans</text>
       </svg>`,
       "/Eurovoyage/strategy.svg": `<?xml version="1.0" encoding="UTF-8"?>
-<svg width="1200" height="400" viewBox="0 0 1200 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 1200 400" fill="none" xmlns="http://www.w3.org/2000/svg">
   <!-- Background -->
   <rect width="1200" height="400" fill="#ffffff"/>
   
