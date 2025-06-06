@@ -241,7 +241,52 @@ export default function EurovoyageCaseStudy() {
 
         <!-- Description -->
         <text x="10" y="95" class="text">5. Payment & Subscription Plans</text>
-      </svg>`
+      </svg>`,
+      "/Eurovoyage/strategy.svg": `<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="400" viewBox="0 0 1200 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="400" fill="#ffffff"/>
+  
+  <!-- Boxes with modern styling -->
+  <!-- Influencers -->
+  <rect x="100" y="160" width="140" height="80" rx="12" fill="#2D2D2D" opacity="0.9"/>
+  <text x="170" y="205" font-family="Inter, Arial" font-size="16" fill="white" text-anchor="middle">Influencers</text>
+  
+  <!-- Google -->
+  <rect x="300" y="160" width="140" height="80" rx="12" fill="#4285F4" opacity="0.9"/>
+  <text x="370" y="205" font-family="Inter, Arial" font-size="16" fill="white" text-anchor="middle">Google Data</text>
+  
+  <!-- Database -->
+  <rect x="500" y="160" width="140" height="80" rx="12" fill="#00A65A" opacity="0.9"/>
+  <text x="570" y="205" font-family="Inter, Arial" font-size="16" fill="white" text-anchor="middle">Database</text>
+  
+  <!-- API -->
+  <rect x="700" y="160" width="140" height="80" rx="12" fill="#FF5C85" opacity="0.9"/>
+  <text x="770" y="205" font-family="Inter, Arial" font-size="16" fill="white" text-anchor="middle">API</text>
+  
+  <!-- Website -->
+  <rect x="900" y="160" width="140" height="80" rx="12" fill="#3ECF8E" opacity="0.9"/>
+  <text x="970" y="205" font-family="Inter, Arial" font-size="16" fill="white" text-anchor="middle">Website</text>
+
+  <!-- Modern Arrows -->
+  <path d="M240 200 L300 200" stroke="#2D2D2D" stroke-width="2" stroke-linecap="round" marker-end="url(#arrowhead)"/>
+  <path d="M440 200 L500 200" stroke="#2D2D2D" stroke-width="2" stroke-linecap="round" marker-end="url(#arrowhead)"/>
+  <path d="M640 200 L700 200" stroke="#2D2D2D" stroke-width="2" stroke-linecap="round" marker-end="url(#arrowhead)"/>
+  <path d="M840 200 L900 200" stroke="#2D2D2D" stroke-width="2" stroke-linecap="round" marker-end="url(#arrowhead)"/>
+
+  <!-- Arrow Marker -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#2D2D2D"/>
+    </marker>
+  </defs>
+
+  <!-- Flow Labels -->
+  <text x="270" y="180" font-family="Inter, Arial" font-size="12" fill="#666" text-anchor="middle">Extract</text>
+  <text x="470" y="180" font-family="Inter, Arial" font-size="12" fill="#666" text-anchor="middle">Store</text>
+  <text x="670" y="180" font-family="Inter, Arial" font-size="12" fill="#666" text-anchor="middle">Process</text>
+  <text x="870" y="180" font-family="Inter, Arial" font-size="12" fill="#666" text-anchor="middle">Display</text>
+</svg>`
     },
 
     metrics: [
@@ -313,7 +358,13 @@ export default function EurovoyageCaseStudy() {
         title: "Strategic Direction",
         description:
           "The core strategy leverages existing content from influencers (bloggers, YouTubers, and content creators) who visit restaurants and destinations across Europe. We developed an efficient system where the founder identifies these locations from influencer content, processes them through Google Place ID, and stores them in Airtable. This data is then enriched using Apify to create comprehensive restaurant and destination templates. This approach allows Eurovoyage to benefit from established influencer traffic while building a valuable content database.",
-        image: "/Eurovoyage/strategy.svg",
+        media: [
+          {
+            type: "image",
+            src: "/Eurovoyage/strategy.svg",
+            alt: "Strategic Direction Flow"
+          }
+        ],
         deliverables: [
           "Influencer content tracking system",
           "Google Place ID integration",
@@ -556,7 +607,7 @@ export default function EurovoyageCaseStudy() {
                                   controls={true}
                                 />
                               ) : item.src.endsWith('.svg') ? (
-                                <div className="w-full max-w-[600px] mx-auto" dangerouslySetInnerHTML={{ __html: caseStudy.svgContent[item.src as keyof typeof caseStudy.svgContent] || '<p>SVG content not found</p>' }} />
+                                <div className="w-full max-w-[1200px] mx-auto" dangerouslySetInnerHTML={{ __html: caseStudy.svgContent[item.src as keyof typeof caseStudy.svgContent] || '<p>SVG content not found</p>' }} />
                               ) : (
                                 <ImageWithLoader
                                   src={item.src}
@@ -572,11 +623,7 @@ export default function EurovoyageCaseStudy() {
                         </div>
                       ) : phase.image ? (
                         phase.image.endsWith('.svg') ? (
-                          <SVGLoader
-                            src={phase.image}
-                            alt={phase.title}
-                            className="w-full h-[400px]"
-                          />
+                          <div className="w-full max-w-[1200px] mx-auto" dangerouslySetInnerHTML={{ __html: caseStudy.svgContent[phase.image as keyof typeof caseStudy.svgContent] || '<p>SVG content not found</p>' }} />
                         ) : (
                           <ImageWithLoader
                             src={phase.image}
