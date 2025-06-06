@@ -101,7 +101,7 @@ export default function EurovoyageCaseStudy() {
     subtitle: "Premium European Restaurant & Attraction Directory",
     description:
       "A curated premium directory platform showcasing the finest restaurants and attractions across Europe, designed to help travelers discover authentic local experiences. Starting with a focused premium product to establish quality and brand value.",
-    coverImage: "/eurovoyage/galaxy-tab-s8-ultra.png",
+    coverImage: "/Eurovoyage/galaxy-tab-s8-ultra.png",
 
     // Inline SVG content mapping for marketing steps to bypass file loading issues
     svgContent: {
@@ -313,7 +313,7 @@ export default function EurovoyageCaseStudy() {
         title: "Strategic Direction",
         description:
           "The core strategy leverages existing content from influencers (bloggers, YouTubers, and content creators) who visit restaurants and destinations across Europe. We developed an efficient system where the founder identifies these locations from influencer content, processes them through Google Place ID, and stores them in Airtable. This data is then enriched using Apify to create comprehensive restaurant and destination templates. This approach allows Eurovoyage to benefit from established influencer traffic while building a valuable content database.",
-        image: "/eurovoyage/strategy.svg",
+        image: "/Eurovoyage/strategy.svg",
         deliverables: [
           "Influencer content tracking system",
           "Google Place ID integration",
@@ -556,10 +556,10 @@ export default function EurovoyageCaseStudy() {
                                   controls={true}
                                 />
                               ) : item.src.endsWith('.svg') ? (
-                                <div className="w-full max-w-[600px] mx-auto" dangerouslySetInnerHTML={{ __html: caseStudy.svgContent[item.src.replace('/eurovoyage/', '/Eurovoyage/') as keyof typeof caseStudy.svgContent] || '<p>SVG content not found</p>' }} />
+                                <div className="w-full max-w-[600px] mx-auto" dangerouslySetInnerHTML={{ __html: caseStudy.svgContent[item.src as keyof typeof caseStudy.svgContent] || '<p>SVG content not found</p>' }} />
                               ) : (
                                 <ImageWithLoader
-                                  src={item.src.replace('/eurovoyage/', '/Eurovoyage/')}
+                                  src={item.src}
                                   alt={item.alt}
                                   width={1200}
                                   height={600}
